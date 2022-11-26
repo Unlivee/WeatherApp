@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Удаление</title>
+
+</head>
+<body>
+    <h1>Удаления </h1>
+    <div class="alert alert-primary">
+        <a>Город: </a>{{ info.city }}
+        <a>Температура:</a> {{ info.temp }}C°
+        <img src="http://openweathermap.org/img/wn/{{info.icon}}.png">
+    </div>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Удалить запись</button><br>
+    </form>
+</body>
+</html>
+
